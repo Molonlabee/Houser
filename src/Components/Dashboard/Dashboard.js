@@ -13,7 +13,7 @@ class Dashboard extends Component {
         };
     }
 
-    componentDidMount () => {
+    componentDidMount() {
         axios.get("/api/houses")
         .then(res => {
             this.setState({house:res.data});
