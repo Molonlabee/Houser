@@ -13,16 +13,16 @@ const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
 app.use(express.json());
 app.use(
    session({
-    secret: SESSION_SECRET,
-    resave: true,
-    saveUninitialized: true
+        secret: SESSION_SECRET,
+        resave: true,
+        saveUninitialized: true
     })
 );
 
 //ENDPOINTS
-app.get('/api/houses',ctrl.getHouses)
-app.post('/api/add', ctrl.addHouse)
-app.delete('/api/delete/:id',ctrl.deleteHouse)
+app.get("/api/houses",ctrl.getHouses)
+app.post("/api/add", ctrl.addHouse)
+app.delete("/api/delete/:id",ctrl.deleteHouse)
 
 //DB
 massive(CONNECTION_STRING)
@@ -32,7 +32,7 @@ massive(CONNECTION_STRING)
       console.log(`BAT IS BACK`);
     });
   })
-  .catch(err => console.log(`DATABASE MASSIVE CONNECTION ERROR`, err));
+  .catch(err => console.log("DATABASE MASSIVE CONNECTION ERROR", err));
 
 //LISTEN
 app.listen(SERVER_PORT,() => {
