@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Route} from 'react-router-dom';
-import Step1 from './Steps/Step1';
-import Step2 from './Steps/Step2';
-import Step3 from './Steps/Step3';
+import Step1 from '../../Steps/Step1';
+import Step2 from '../../Steps/Step2';
+import Step3 from '../../Steps/Step3';
 
 class Wizard extends Component {
     render() {
