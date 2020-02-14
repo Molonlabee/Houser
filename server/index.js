@@ -3,6 +3,8 @@ const express = require('express');
 const session = require('express-session');
 const massive = require('massive');
 
+const app = express();
+
 //CONTROLLERS
 const ctrl = require('./controller');
 
